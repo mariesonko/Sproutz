@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  host: MyString
+  guest: MyString
+  parent: MyString
+  child: MyString
+  caretaker: MyString
+
+two:
+  host: MyString
+  guest: MyString
+  parent: MyString
+  child: MyString
+  caretaker: MyString
