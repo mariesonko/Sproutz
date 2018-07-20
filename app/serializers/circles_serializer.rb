@@ -1,6 +1,5 @@
 class CirclesSerializer < ActiveModel::Serializer
-  belongs_to :child
-  belongs_to :playdates
+  has_many :events
   attributes :id
 
 end

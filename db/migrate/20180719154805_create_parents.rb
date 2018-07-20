@@ -1,8 +1,7 @@
 class CreateParents < ActiveRecord::Migration[5.2]
   def change
     create_table :parents do |t|
-      t.integer :host_id
-      t.integer :guest_id
+      t.integer :family_id
       t.string :firstName
       t.string :lastName
       t.string :cellPhone

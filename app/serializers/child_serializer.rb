@@ -1,5 +1,4 @@
 class ChildSerializer < ActiveModel::Serializer
-  has_many :circles
-  belongs_to :family
+  has_many :playdates
   attributes :id
 end

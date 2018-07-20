@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  host_id: 1
+  guest_id: 1
+  date: 2018-07-19
+  startTime: 
+  endTime: 
+
+two:
+  host_id: 1
+  guest_id: 1
+  date: 2018-07-19
+  startTime: 
+  endTime: 

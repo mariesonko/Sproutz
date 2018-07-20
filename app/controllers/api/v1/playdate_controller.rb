@@ -1,4 +1,4 @@
-class Api::V1::PlaydatesController < ApplicationController
+class Api::V1::PlaydateController < ApplicationController
 
     def index
       @playdates = Playdate.all

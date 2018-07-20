@@ -1,6 +1,6 @@
-class CreatePlaydates < ActiveRecord::Migration[5.2]
+class CreateEvents < ActiveRecord::Migration[5.2]
   def change
-    create_table :playdates do |t|
+    create_table :events do |t|
       t.string :eventType
       t.date :date
       t.time[p] :startTime
@@ -13,7 +13,9 @@ class CreatePlaydates < ActiveRecord::Migration[5.2]
       t.string :country
       t.string :supervisedBy
       t.string :food
+      t.string :rating
       t.integer :eventFees
+      t.integer :circle_id
 
       t.timestamps
     end

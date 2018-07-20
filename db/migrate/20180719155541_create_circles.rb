@@ -4,7 +4,8 @@ class CreateCircles < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :child_id
       t.integer :playdate_id
-      t.string :type
+      t.boolean :private
+      t.boolean :public
       t.integer :size
       t.text :decription
 

@@ -1,4 +1,4 @@
-class Api::V1::ParentController < ApplicationController
+class Api::V1::ParentsController < ApplicationController
 
   def index
     @parents = Parent.all
