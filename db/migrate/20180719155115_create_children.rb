@@ -7,7 +7,6 @@ class CreateChildren < ActiveRecord::Migration[5.2]
       t.string :gender
       t.date :dateOfBirth
       t.text :medicalConditions
-      t.string :password_digest
       t.timestamps
     end
   end

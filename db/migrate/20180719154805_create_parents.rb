@@ -12,6 +12,8 @@ class CreateParents < ActiveRecord::Migration[5.2]
       t.string :state
       t.integer :zipCode
       t.string :country
+      t.string :email
+      t.string :password_digest
 
       t.timestamps
     end

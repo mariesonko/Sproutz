@@ -3,4 +3,5 @@ class Family < ApplicationRecord
   has_many :parents
   has_many :playdates, through: :children
 
+  
 end
