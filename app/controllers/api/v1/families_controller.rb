@@ -30,10 +30,10 @@ class Api::V1::FamiliesController < ApplicationController
 
     private
       def family_params
-        params.permit(:parent, :child, :caretaker, :size)
+        params.permit(:title)
       end
 
       def find_family
         @families = Family.find(params[:id])
-    end
+      end
 end

@@ -1,6 +1,7 @@
 class PlaydatesSerializer < ActiveModel::Serializer
-  belongs_to :child
+  belongs_to :guest, class_name: "Child", optional: true
+  belongs_to :host, class_name: "Child"
   belongs_to :event
-  belongs_to :circle
+
   attributes :id
 end

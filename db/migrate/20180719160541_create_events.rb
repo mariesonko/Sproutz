@@ -2,9 +2,9 @@ class CreateEvents < ActiveRecord::Migration[5.2]
   def change
     create_table :events do |t|
       t.string :eventType
-      t.date :date
-      t.time[p] :startTime
-      t.time[p] :endTime
+      t.string :date
+      t.string :startTime
+      t.string :endTime
       t.integer :spotsAvailable
       t.string :address
       t.string :city
@@ -13,9 +13,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :country
       t.string :supervisedBy
       t.string :food
-      t.string :rating
+      t.integer :rating
       t.integer :eventFees
-      t.integer :circle_id
 
       t.timestamps
     end

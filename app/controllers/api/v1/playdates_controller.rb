@@ -1,4 +1,4 @@
-class Api::V1::PlaydateController < ApplicationController
+class Api::V1::PlaydatesController < ApplicationController
 
   before_action :find_playdate, only: [:show, :update, :destroy]
 
@@ -29,11 +29,11 @@ class Api::V1::PlaydateController < ApplicationController
 
       private
         def playdate_params
-          params.permit(:host_id, :guest_id, :circle_id, :date, :startTime, :endTime )
+          params.permit(:host_id, :guest_id, :event_id, :date, :startTime, :endTime )
         end
 
         def find_playdate
           @playdates = Playdate.find(params[:id])
         end
-    end
+    
 end

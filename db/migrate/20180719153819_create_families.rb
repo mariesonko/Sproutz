@@ -1,11 +1,7 @@
 class CreateFamilies < ActiveRecord::Migration[5.2]
   def change
     create_table :families do |t|
-      t.string :parent
-      t.string :child
-      t.string :caretaker
-      t.integer :size
-
+      t.string :title
       t.timestamps
     end
   end

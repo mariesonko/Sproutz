@@ -1,9 +1,7 @@
 class ChildSerializer < ActiveModel::Serializer
+  belongs_to :family
   has_many :parents, through: :family
 
-  has_many :playdates
-
-  has_many :circles, through: :playdates
   has_many :events, through: :playdates
 
   has_many :active_playdates,  class_name: "Playdate",
@@ -16,6 +14,9 @@ class ChildSerializer < ActiveModel::Serializer
 
   has_many :guests, through: :active_playdates
   has_many :hosts, through: :passive_playdates
+
+  validates :firtName, presence: true
+  validates :lastName, presence: true
 
   attributes :id
 end
