@@ -29,11 +29,11 @@ class Api::V1::EventsController < ApplicationController
 
     private
       def event_params
-        params.permit(:eventType,:date, :startTime, :endTime, :spotsAvailable, :address, :city, :state, :zipCode, :country, :supervisedBy, :food, :rating, :eventFees)
+        params.permit(:eventType,:date, :startTime, :endTime, :spotsAvailable, :address, :city, :state, :zipCode, :country, :supervisedBy, :food, :rating, :eventFees, :title, :description)
       end
 
       def find_event
         @events = Event.find(params[:id])
       end
-  
+
 end
