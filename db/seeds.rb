@@ -25,9 +25,10 @@ marius = Child.create(family_id: 1, firstName: 'Marius', lastName: 'Smith', gend
 
 paige = Child.create(family_id: 2, firstName: 'Paige', lastName: 'Blake', gender: 'female', dateOfBirth: '07182016', medicalConditions: 'none')
 
-event1= Event.create(eventType: 'concert', date: '07/25/2018', startTime: '3:00pm', endTime: '6:00pm', spotsAvailable: 20, address: '2100 park ave', city: 'New York', state: 'NY', zipCode: 10021, country: 'USA', supervisedBy: 'Alex Key', food: 'Paella', rating: 8, eventFees: 10)
+event1= Event.create(title: 'Music of Grateful Dead for Kids', eventType: 'concert', date: '07/25/2018', startTime: '3:00pm', endTime: '6:00pm', spotsAvailable: 20, address: '2100 park ave', city: 'New York', state: 'NY', zipCode: 10021, country: 'USA', supervisedBy: 'Alex Key', food: 'Paella', rating: 8, eventFees: 10, imageUrl: 'https://image-ticketfly.imgix.net/00/02/92/32/16-og.png?w=167&h=333')
 
-event2= Event.create(eventType: 'Brooklyn Botanical Garden', date: '07/29/2018', startTime: '12:00pm', endTime: '5:00pm', spotsAvailable: 10, address: '21 prospect park', city: 'Brooklyn', state: 'NY', zipCode: 11121, country: 'USA', supervisedBy: 'Sally Pond', food: 'Pizza', rating: 9, eventFees: 10)
+event2= Event.create(title: 'Hamilton Play for Kids', eventType: 'Brooklyn Botanical Garden', date: '07/29/2018', startTime: '12:00pm', endTime: '5:00pm', spotsAvailable: 10, address: '21 prospect park', city: 'Brooklyn', state: 'NY', zipCode: 11121, country: 'USA', supervisedBy: 'Sally Pond', food: 'Pizza', rating: 9, eventFees: 10, imageUrl: 'https://image-ticketfly.imgix.net/00/02/92/32/84-og.png?w=167&h=333')
+
 
 playdate1 = Playdate.create(host_id:1, guest_id:2, event_id: 1, date: '07/28/2018', startTime: '3:00pm', endTime: '6:00pm')
 
