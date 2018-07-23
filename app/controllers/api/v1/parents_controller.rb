@@ -30,7 +30,7 @@ class Api::V1::ParentsController < ApplicationController
 
     private
       def parent_params
-        params.permit(:family_id, :firstName, :lastName, :cellPhone, :dateOfBirth, :gender, :address, :city, :state, :zipCode, :country, :email, :username)
+        params.permit(:family_id, :firstName, :lastName, :cellPhone, :dateOfBirth, :gender, :address, :city, :state, :zipCode, :country, :email)
       end
 
       def find_parent
