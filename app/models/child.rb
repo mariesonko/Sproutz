@@ -2,7 +2,7 @@ class Child < ApplicationRecord
 
   belongs_to :family
   has_many :parents, through: :family
-  
+
   has_many :events, through: :playdates
 
   has_many :active_playdates,  class_name: "Playdate",
