@@ -30,7 +30,7 @@ class Api::V1::FamiliesController < ApplicationController
 
     private
       def family_params
-        params.permit(:title)
+        params.permit(:title, :username, :password)
       end
 
       def find_family

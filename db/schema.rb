@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_23_183114) do
+ActiveRecord::Schema.define(version: 2018_07_19_183248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,9 @@ ActiveRecord::Schema.define(version: 2018_07_23_183114) do
   end
 
   create_table "events", force: :cascade do |t|
+    t.string "title"
     t.string "eventType"
+    t.text "description"
     t.string "date"
     t.string "startTime"
     t.string "endTime"
@@ -41,15 +43,15 @@ ActiveRecord::Schema.define(version: 2018_07_23_183114) do
     t.string "food"
     t.integer "rating"
     t.integer "eventFees"
+    t.string "imageUrl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "title"
-    t.text "description"
-    t.string "imageUrl"
   end
 
   create_table "families", force: :cascade do |t|
     t.string "title"
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,16 +60,15 @@ ActiveRecord::Schema.define(version: 2018_07_23_183114) do
     t.integer "family_id"
     t.string "firstName"
     t.string "lastName"
-    t.string "cellPhone"
     t.date "dateOfBirth"
     t.string "gender"
+    t.string "email"
+    t.string "cellPhone"
     t.string "address"
     t.string "city"
     t.string "state"
     t.integer "zipCode"
     t.string "country"
-    t.string "email"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

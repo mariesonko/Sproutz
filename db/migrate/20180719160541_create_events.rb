@@ -1,7 +1,9 @@
 class CreateEvents < ActiveRecord::Migration[5.2]
   def change
     create_table :events do |t|
+      t.string :title
       t.string :eventType
+      t.text  :description
       t.string :date
       t.string :startTime
       t.string :endTime
@@ -15,6 +17,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :food
       t.integer :rating
       t.integer :eventFees
+      t.string :imageUrl
 
       t.timestamps
     end

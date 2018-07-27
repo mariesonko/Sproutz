@@ -8,6 +8,7 @@ class Api::V1::ParentsController < ApplicationController
       end
 
       def create
+
         parent = Parent.create(parent_params)
         render json: parent, status: 201
       end
@@ -30,7 +31,7 @@ class Api::V1::ParentsController < ApplicationController
 
     private
       def parent_params
-        params.permit(:family_id, :firstName, :lastName, :cellPhone, :dateOfBirth, :gender, :address, :city, :state, :zipCode, :country, :email, :password)
+        params.permit(:family_id, :firstName, :lastName, :cellPhone, :dateOfBirth, :gender, :address, :city, :state, :zipCode, :country, :email)
       end
 
       def find_parent
