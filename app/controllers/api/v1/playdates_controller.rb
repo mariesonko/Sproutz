@@ -35,5 +35,5 @@ class Api::V1::PlaydatesController < ApplicationController
         def find_playdate
           @playdates = Playdate.find(params[:id])
         end
-    
+
 end
