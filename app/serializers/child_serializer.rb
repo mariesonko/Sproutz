@@ -15,8 +15,8 @@ class ChildSerializer < ActiveModel::Serializer
   has_many :guests, through: :active_playdates
   has_many :hosts, through: :passive_playdates
 
-  validates :firtName, presence: true
-  validates :lastName, presence: true
+  validates :childFirstName, presence: true
+  validates :childLastName, presence: true
 
   attributes :id
 end

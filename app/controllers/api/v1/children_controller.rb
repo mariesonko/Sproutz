@@ -29,7 +29,7 @@ class Api::V1::ChildrenController < ApplicationController
 
   private
     def child_params
-      params.permit(:family_id, :firstName, :lastName, :gender, :dateOfBirth, :medicalConditions)
+      params.require(:child).permit(:family_id, :childFirstName, :childLastName, :childGender, :childDateOfBirth, :medicalConditions)
     end
 
     def find_child

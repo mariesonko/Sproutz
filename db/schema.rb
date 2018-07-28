@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 2018_07_19_183248) do
 
   create_table "children", force: :cascade do |t|
     t.integer "family_id"
-    t.string "firstName"
-    t.string "lastName"
-    t.string "gender"
-    t.date "dateOfBirth"
+    t.string "childFirstName"
+    t.string "childLastName"
+    t.string "childGender"
+    t.date "childDateOfBirth"
     t.text "medicalConditions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
