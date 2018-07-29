@@ -1,12 +1,12 @@
 class Api::V1::AuthController < ApplicationController
 
     def create
-    parent = Parent.find_by(email: params[:email])
+    family = Family.find_by(username: params[:username])
 
-    if parent && family.authenticate(params[:password])
+    if family && family.authenticate(params[:password])
       # issue that family a token
       token = issue_token(family)
-      render json: {id: family.id, email: family.email, jwt: token}
+      render json: {id: family.id, username: family.username, jwt: token}
     else
       render json: {error: 'That family could not be found'}, status: 401
     end
@@ -14,9 +14,9 @@ class Api::V1::AuthController < ApplicationController
 
   def show
     # token = request.headers['Authorization']
-    # family = Parent.find_by(id: token)
+    # family = Family.find_by(id: token)
     if logged_in?
-      render json: { id: current_parent.id, email: current_parent.email }
+      render json: { id: current_family.id, username: current_family.username }
     else
       render json: {error: 'No family could be found'}, status: 401
     end
