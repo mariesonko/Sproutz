@@ -1,3 +1,4 @@
+# require 'jwt'
 class ApplicationController < ActionController::API
 
     def issue_token(family)
@@ -22,7 +23,7 @@ class ApplicationController < ActionController::API
     end
 
     def family_id
-      decoded_token.first['family_id']
+      decoded_token[0]['family_id']
     end
 
     def logged_in?
