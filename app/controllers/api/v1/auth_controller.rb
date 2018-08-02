@@ -6,7 +6,7 @@ class Api::V1::AuthController < ApplicationController
     if family && family.authenticate(params[:password])
       # issue that family a token
       token = issue_token(family)
-      render json: {id: family.id, username: family.username, jwt: token, children: family.children, title: family.title, parents: family.parents}
+      render json: {id: family.id, username: family.username, jwt: token, children: family.children, title: family.title, parents: family.parents, active_playdates: family.formatted_active_playdates, passive_playdates: family.formatted_passive_playdates}
     else
       render json: {error: 'That family could not be found'}, status: 401
     end

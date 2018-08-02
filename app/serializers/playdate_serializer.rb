@@ -3,5 +3,5 @@ class PlaydatesSerializer < ActiveModel::Serializer
   belongs_to :host, class_name: "Child"
   belongs_to :event
 
-  attributes :id
+  attributes :id, :military_start_time, :military_end_time
 end

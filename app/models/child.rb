@@ -19,4 +19,5 @@ class Child < ApplicationRecord
   validates :childFirstName, presence: true
   validates :childLastName, presence: true
 
+
 end
