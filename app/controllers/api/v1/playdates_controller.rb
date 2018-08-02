@@ -8,8 +8,15 @@ class Api::V1::PlaydatesController < ApplicationController
     end
 
     def create
-      playdate = Playdate.create(playdate_params)
-      render json: playdate, status: 201
+      playdate = Playdate.new(playdate_params)
+      event= Event.find(playdate.event.id)
+      playdate.host_id = event.playdates[0].host.id || 1
+      if playdate.valid?
+        playdate.save
+        render json: playdate, status: 201
+      else
+        byebug
+      end
     end
 
     def show
@@ -29,7 +36,7 @@ class Api::V1::PlaydatesController < ApplicationController
 
       private
         def playdate_params
-          params.permit(:host_id, :guest_id, :event_id, :date, :startTime, :endTime )
+          params.permit( :guest_id, :event_id, :date, :startTime, :endTime )
         end
 
         def find_playdate
